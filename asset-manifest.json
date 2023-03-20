@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/OPC-Kasa/static/css/main.be852e38.css",
+    "main.js": "/OPC-Kasa/static/js/main.6de7a1ee.js",
+    "static/media/aboutbanner.png": "/OPC-Kasa/static/media/aboutbanner.b3ade54ce34df95b6593.png",
+    "static/media/backheader.png": "/OPC-Kasa/static/media/backheader.d460c4f34721c0d8b173.png",
+    "static/media/LOGO.png": "/OPC-Kasa/static/media/LOGO.f04cd580843ff11469c4.png",
+    "index.html": "/OPC-Kasa/index.html",
+    "main.be852e38.css.map": "/OPC-Kasa/static/css/main.be852e38.css.map",
+    "main.6de7a1ee.js.map": "/OPC-Kasa/static/js/main.6de7a1ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be852e38.css",
+    "static/js/main.6de7a1ee.js"
+  ]
+}
