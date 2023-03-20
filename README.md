@@ -1,3 +1,7 @@
+# PROJET GUIDILINES
+
+Step 4 : Home page (SASS and map function in the locations list)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

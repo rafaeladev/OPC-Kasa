@@ -2,7 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:$layout-padding;
+    margin-bottom: $layout-mobile-padding;
+    @include desktop-only{
+        margin-bottom: $layout-desktop-padding;
+    }
     &__img{
         max-width: 210px;
         max-width: 145px;

@@ -1,12 +1,18 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Banner from "../components/Banner";
+import Card from "../components/Card";
+import cardsData from "../logements.json";
 
 const Home = () => {
+    const cardElements = cardsData.map((data) => {
+        return <Card key={data.id} logement={data} />;
+    });
+
     return (
         <div>
-            <Header />
-            <h1>Acccueil</h1>
+            <Banner />
+            <section className="cardsList">{cardElements}</section>
             <Footer />
         </div>
     );

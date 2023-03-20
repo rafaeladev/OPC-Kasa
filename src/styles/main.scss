@@ -5,7 +5,10 @@
 
 /*Import bases CSS*/
 @import "./base/base";
+@import "./base/typography";
 
 /*Import layout CSS*/
 @import "./layout/nav";
+@import "./layout/header";
+@import "./layout/cards";
 @import "./layout/footer";

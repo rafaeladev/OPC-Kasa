@@ -1,0 +1,29 @@
+.header {
+    padding: $layout-mobile-padding;
+    @include desktop-only{
+        padding: $layout-desktop-padding;
+    }
+    &__img{
+        background: url("../../assets/backheader.png") center/cover;
+        border-radius: 25px;
+        height:111px;
+        width: 100%;
+        @include desktop-only {
+            height: 223px;
+            justify-content: center;
+        }
+    }
+    &__title {
+        background-color: rgb(000 000 000 / 0.3);
+        border-radius: 25px;
+        height:111px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        @include desktop-only {
+            height: 223px;
+            justify-content: center;
+        }
+    }
+}

@@ -1,6 +1,5 @@
 .footer{
     background: $color-black;
-    color: $color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,5 +7,8 @@
     &__img{
         width:122px;
         margin-bottom: 25px;
+    }
+    & p{
+        color: $color-white;
     }
 }
