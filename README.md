@@ -1,6 +1,6 @@
 # PROJET GUIDILINES
 
-Step 4 : Home page (SASS and map function in the locations list)
+Step 5 : About page (SASS and useEffect for collapse buttons)
 
 # Getting Started with Create React App
 

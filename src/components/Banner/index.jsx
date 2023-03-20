@@ -1,19 +1,13 @@
 import React from "react";
-import Nav from "../Nav";
 
-const Header = () => {
+const Banner = (props) => {
     return (
-        <section className="header">
-            <Nav />
-            <div className="header__color">
-                <div className="header__img">
-                    <h1 className="header__title">
-                        Chez vous, partout et ailleurs
-                    </h1>
-                </div>
+        <section className="banner">
+            <div className={`banner__${props.div}img`}>
+                <h1 className="banner__title">{props.title}</h1>
             </div>
         </section>
     );
 };
 
-export default Header;
+export default Banner;

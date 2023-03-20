@@ -1,12 +1,19 @@
 .header {
     padding: $layout-mobile-padding;
-    @include desktop-only{
+    @include desktop-only {
         padding: $layout-desktop-padding;
     }
-    &__img{
+}
+
+.banner {
+    padding: 0 $layout-mobile-padding 0 $layout-mobile-padding;
+    @include desktop-only {
+        padding: 0 $layout-desktop-padding 0 $layout-desktop-padding;
+    }
+    &__homeimg {
         background: url("../../assets/backheader.png") center/cover;
         border-radius: 25px;
-        height:111px;
+        height: 111px;
         width: 100%;
         @include desktop-only {
             height: 223px;
@@ -16,7 +23,7 @@
     &__title {
         background-color: rgb(000 000 000 / 0.3);
         border-radius: 25px;
-        height:111px;
+        height: 111px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -26,4 +33,15 @@
             justify-content: center;
         }
     }
+    &__aboutimg {
+        background: url("../../assets/aboutbanner.png") center/cover;
+        border-radius: 25px;
+        height: 111px;
+        width: 100%;
+        @include desktop-only {
+            height: 223px;
+            justify-content: center;
+        }
+    }
 }
+

@@ -1,0 +1,6 @@
+.collapsesList{
+    padding: $layout-mobile-padding;
+    @include desktop-only {
+        padding: $layout-desktop-padding;
+    }
+}

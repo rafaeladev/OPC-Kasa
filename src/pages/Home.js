@@ -1,7 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
+import Header from "../components/Header";
 import Card from "../components/Card";
+import Banner from "../components/Banner";
 import cardsData from "../logements.json";
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
 
     return (
         <div>
-            <Banner />
+            <Header />
+            <Banner title=" Chez vous, partout et ailleurs" div="home" />
             <section className="cardsList">{cardElements}</section>
             <Footer />
         </div>
