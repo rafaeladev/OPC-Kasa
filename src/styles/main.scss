@@ -1,0 +1,11 @@
+/*Import utils CSS*/
+@import "./utils/maps";
+@import "./utils/mixins";
+@import "./utils/variables";
+
+/*Import bases CSS*/
+@import "./base/base";
+
+/*Import layout CSS*/
+@import "./layout/nav";
+@import "./layout/footer";

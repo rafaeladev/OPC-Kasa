@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:$layout-padding;
+    &__img{
+        max-width: 210px;
+        max-width: 145px;
+    }
+    &__link{
+        display: flex;
+        color: $color-piment;
+        margin-left: auto;
+        & li{
+            color: $color-piment;
+            margin-left: 20px;
+            @include mobile-only{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
