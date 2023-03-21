@@ -5,7 +5,9 @@ import Logo from "../../assets/LOGO.png";
 const Nav = (props) => {
     return (
         <div className="nav">
-            <img className="nav__img" src={Logo} alt="logo" />
+            <NavLink to="/">
+                <img className="nav__img" src={Logo} alt="logo" />
+            </NavLink>
             <ul className="nav__link">
                 <NavLink to="/">
                     <li

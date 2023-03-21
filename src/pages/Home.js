@@ -12,7 +12,11 @@ const Home = () => {
     return (
         <div>
             <Header active="home" />
-            <Banner title=" Chez vous, partout et ailleurs" div="home" />
+            <Banner
+                h1={true}
+                title=" Chez vous, partout et ailleurs"
+                div="home"
+            />
             <section className="cardsList">{cardElements}</section>
         </div>
     );

@@ -4,7 +4,11 @@ const Banner = (props) => {
     return (
         <section className="banner">
             <div className={`banner__${props.div}img`}>
-                <h1 className="banner__title">{props.title}</h1>
+                {props.h1 ? (
+                    <h1 className="banner__title">{props.title}</h1>
+                ) : (
+                    ""
+                )}
             </div>
         </section>
     );

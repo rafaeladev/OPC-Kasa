@@ -7,7 +7,7 @@ const Apropos = () => {
     return (
         <div>
             <Header active="about" />
-            <Banner img={"aboutbanner.png"} div="about" />
+            <Banner h1={false} div="about" />
             <div className="collapsesList">
                 <Collapase
                     title="Fiabilité"
