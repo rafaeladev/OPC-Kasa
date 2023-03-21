@@ -10,12 +10,9 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/OPC-Kasa/" element={<Home />} />
-                <Route path="/OPC-Kasa/apropos" element={<Apropos />} />
-                <Route
-                    path="/OPC-Kasa/fichelogement"
-                    element={<Fichelogement />}
-                />
+                <Route path="/" element={<Home />} />
+                <Route path="/apropos" element={<Apropos />} />
+                <Route path="/fichelogement" element={<Fichelogement />} />
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
