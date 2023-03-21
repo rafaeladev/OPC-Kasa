@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
 import Fichelogement from "./pages/Fichelogement";
@@ -7,8 +7,10 @@ import Error from "./components/Error";
 import Footer from "./components/Footer/index.jsx";
 
 const App = () => {
+    const { search } = window.location;
+    console.log(search);
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/apropos" element={<Apropos />} />
@@ -16,7 +18,7 @@ const App = () => {
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
