@@ -16,6 +16,8 @@
         background-color: $color-gray;
         border-radius: 5px;
         padding: 20px 10px 10px 10px;
+
+        animation: collapsein $menu-dur $menu-delay ease-in-out both;
     }
     &__button {
         height: 14px;

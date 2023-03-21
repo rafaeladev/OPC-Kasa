@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Card from "../components/Card";
 import Banner from "../components/Banner";
@@ -12,10 +11,9 @@ const Home = () => {
 
     return (
         <div>
-            <Header />
+            <Header active="home" />
             <Banner title=" Chez vous, partout et ailleurs" div="home" />
             <section className="cardsList">{cardElements}</section>
-            <Footer />
         </div>
     );
 };

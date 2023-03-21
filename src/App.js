@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
 import Fichelogement from "./pages/Fichelogement";
 import Error from "./components/Error";
+import Footer from "./components/Footer/index.jsx";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path="/fichelogement" element={<Fichelogement />} />
                 <Route path="*" element={<Error />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 };

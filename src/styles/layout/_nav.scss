@@ -21,5 +21,8 @@
                 text-transform: uppercase;
             }
         }
+        &__active{
+            text-decoration: underline $color-piment;
+        }
     }
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import Nav from "../Nav";
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <section className="header">
-            <Nav />
-        </section>
+        <header className="header">
+            <Nav active={props.active} />
+        </header>
     );
 };
 

@@ -1,6 +1,6 @@
 # PROJET GUIDILINES
 
-Step 5 : About page (SASS and useEffect for collapse buttons)
+Step 6 : Error page (SASS routes path)
 
 # Getting Started with Create React App
 
