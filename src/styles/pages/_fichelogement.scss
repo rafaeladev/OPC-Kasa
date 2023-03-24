@@ -1,0 +1,19 @@
+.ficheLogement{
+    display: grid;
+
+    & h2{
+        color: $color-piment
+    }
+    &__index{
+        display:flex;
+        
+    }
+    &__data{
+        display:flex;
+    }
+    &__host{
+        &__data{
+        display: flex;
+        }
+    }
+}

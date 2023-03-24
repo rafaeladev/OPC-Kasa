@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
+
 import Banner from "../components/Banner";
 import Collapase from "../components/Collapse/index.jsx";
 
 const Apropos = () => {
     return (
-        <div>
-            <Header active="about" />
+        <section>
             <Banner h1={false} div="about" />
             <div className="collapsesList">
                 <Collapase
@@ -26,7 +25,7 @@ const Apropos = () => {
                     content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

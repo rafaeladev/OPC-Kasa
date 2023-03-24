@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: $layout-mobile-padding;
+    //margin-bottom: $layout-mobile-padding;
     @include desktop-only{
-        margin-bottom: $layout-desktop-padding;
+        //margin-bottom: $layout-desktop-padding;
     }
     &__img{
         max-width: 210px;

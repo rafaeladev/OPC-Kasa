@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Error = () => {
+const NotFound = () => {
     return (
         <div>
             <section className="error">
@@ -17,4 +17,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default NotFound;

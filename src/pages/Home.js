@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+
 import Card from "../components/Card";
 import Banner from "../components/Banner";
 import cardsData from "../logements.json";
@@ -11,7 +11,6 @@ const Home = () => {
 
     return (
         <div>
-            <Header active="home" />
             <Banner
                 h1={true}
                 title=" Chez vous, partout et ailleurs"

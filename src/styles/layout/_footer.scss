@@ -1,14 +1,12 @@
 .footer{
-    background: $color-black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:60px;
-    &__img{
-        width:122px;
-        margin-bottom: 25px;
-    }
-    & p{
-        color: $color-white;
-    }
+     flex-direction: column;
+     align-items: center;
+     &__img{
+         width:122px;
+         margin: 40px 0 20px 0;
+     }
+     & p{
+         color: $color-white;
+         margin-bottom: 10px;
+     }
 }

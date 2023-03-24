@@ -4,9 +4,9 @@
     display: grid;
     padding: $layout-mobile-padding;
     gap: 20px;
-    margin: $layout-mobile-padding;
+    margin-block: $layout-mobile-padding;
     @include desktop-only {
-        margin: $layout-desktop-padding;
+        margin-block: $layout-desktop-padding;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
         padding: $layout-desktop-padding;
