@@ -4,12 +4,12 @@
     @include desktop-only {
         padding-top: $layout-desktop-padding;
         padding-bottom: 20px;
-       
     }
 }
 
 .banner {
-
+    background-color: black;
+    border-radius: 25px;
     &__homeimg {
         background: url("../../assets/backheader.png") center/cover;
         border-radius: 25px;
@@ -21,7 +21,7 @@
         }
     }
     &__title {
-        color:$color-white;
+        color: $color-white;
         background-color: rgb(000 000 000 / 0.3);
         border-radius: 25px;
         height: 111px;
@@ -37,12 +37,12 @@
     &__aboutimg {
         background: url("../../assets/aboutbanner.png") center/cover;
         border-radius: 25px;
-        height: 111px;
+        height: 223px;
         width: 100%;
+        opacity: 80%;
         @include desktop-only {
             height: 223px;
             justify-content: center;
         }
     }
 }
-

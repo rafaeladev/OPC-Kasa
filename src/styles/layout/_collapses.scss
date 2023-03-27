@@ -1,8 +1,9 @@
 .collapse {
+    margin-bottom: 25px;
     @include desktop-only {
         font-size: 24px;
     }
-    margin-bottom: 20px;
+
     &__title {
         display: flex;
         justify-content: space-between;
@@ -16,6 +17,7 @@
         background-color: $color-gray;
         border-radius: 5px;
         padding: 20px 10px 10px 10px;
+        color: $color-piment;
 
         animation: collapsein $menu-dur $menu-delay ease-in-out both;
     }

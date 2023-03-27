@@ -1,6 +1,8 @@
 # PROJET GUIDILINES
 
-Step 6 : Error page (SASS routes path)
+Step 7 : SlideShow component
+Step 8 : Logement's page created (JS + SASS)
+Step 9 : Error handling (error component created)
 
 # Getting Started with Create React App
 

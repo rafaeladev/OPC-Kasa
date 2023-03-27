@@ -1,59 +1,72 @@
 import React from "react";
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+//import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
-
-const spanStyle = {
-    padding: "20px",
-    color: "#ffffff",
-};
 
 const Slideshow2 = (props) => {
     const [currentImage, setCurrentImage] = React.useState(0);
     const slidesLenght = props.imagesUrl.length;
-    const [right, setRight] = React.useState(true);
+
+    const toggleBullet = (indexPic) => {
+        let bulletsArray = [];
+        for (let i = 0; i < slidesLenght; i++) {
+            bulletsArray = [
+                ...bulletsArray,
+                <li
+                    key={i}
+                    className={
+                        i === indexPic
+                            ? `slidecontainer_bulletactive`
+                            : `slidecontainer__bullet`
+                    }
+                >
+                    ●
+                </li>,
+            ];
+        }
+        return bulletsArray;
+    };
 
     const nextSlide = () => {
         setCurrentImage(
             currentImage === slidesLenght - 1 ? 0 : currentImage + 1
         );
-        setRight(true);
+        //setRight(true);
     };
 
     const prevSlide = () => {
         setCurrentImage(
             currentImage === 0 ? slidesLenght - 1 : currentImage - 1
         );
-        setRight(false);
-    };
 
-    console.log(currentImage);
+        // setRight(false);
+    };
 
     const slideElement = props.imagesUrl.map((url, index) => {
         return (
             index === currentImage && (
                 <img
                     key={index}
-                    className={
-                        right
-                            ? "slide-image-activeright"
-                            : "slide-image-activeleft"
-                    }
+                    // className={
+                    //     right
+                    //         ? "slide-image-activeright"
+                    //         : "slide-image-activeleft"
+                    // }
                     src={url}
-                    alt="img"
+                    alt="logement détails"
                 />
             )
         );
     });
 
     return (
-        <div className="slide-container">
+        <div className="slidecontainer">
             <img
                 className={
                     slidesLenght > 1
-                        ? `slide-container__leftArrow`
-                        : `slide-container__noArrow`
+                        ? `slidecontainer__leftArrow`
+                        : `slidecontainer__noArrow`
                 }
                 src={leftArrow}
                 alt="left arrow icon"
@@ -62,17 +75,15 @@ const Slideshow2 = (props) => {
             <img
                 className={
                     slidesLenght > 1
-                        ? `slide-container__rightArrow`
-                        : `slide-container__noArrow`
+                        ? `slidecontainer__rightArrow`
+                        : `slidecontainer__noArrow`
                 }
                 src={rightArrow}
                 alt="right arrow icon"
                 onClick={nextSlide}
             />
-            <div className="slide-element">{slideElement}</div>
-            <span>
-                {currentImage + 1}/{slidesLenght}
-            </span>
+            <div className="slidecontainer__element">{slideElement}</div>
+            <ul>{toggleBullet(currentImage)}</ul>
         </div>
     );
 };
