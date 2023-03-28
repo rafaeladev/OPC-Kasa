@@ -27,12 +27,13 @@
     }
 
     &__data {
-        display: flex;
-        justify-content: space-between;
         padding-block: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
         @include mobile-only {
-            flex-direction: column;
-            justify-content: center;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
     }
     &__host {
@@ -68,6 +69,10 @@
         padding-inline: 15px;
         margin-right: 10px;
         text-align: center;
+        font-size: 0.8rem;
+        @include mobile-only {
+            font-size: 0.7rem;
+        }
     }
     &__hostpic {
         border-radius: 100px;
@@ -83,6 +88,9 @@
     }
     & li {
         margin: 5px;
+    }
+    &__link {
+        margin-top: 100px;
     }
 }
 

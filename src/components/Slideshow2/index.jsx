@@ -83,7 +83,7 @@ const Slideshow2 = (props) => {
                 onClick={nextSlide}
             />
             <div className="slidecontainer__element">{slideElement}</div>
-            <ul>{toggleBullet(currentImage)}</ul>
+            <ul>{slidesLenght > 1 ? toggleBullet(currentImage) : null}</ul>
         </div>
     );
 };

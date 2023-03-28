@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import cardsData from "../logements.json";
 import Error from "../components/Error";
 import Slideshow2 from "../components/Slideshow2";
@@ -101,6 +101,9 @@ const Fichelogement = () => {
                         content={logement.equipments}
                     />
                 </div>
+                {/* <Link to="../" className="ficheLogement__link">
+                    &larr; <span>Retour à la page d'accueil</span>
+                </Link> */}
             </section>
         );
     } else {

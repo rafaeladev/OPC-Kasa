@@ -5,10 +5,10 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
 import Fichelogement from "./pages/Fichelogement";
-import NotFound from "./pages/NotFound";
 
 // Components
 import Layout from "./components/Layout";
+import Error from "./components/Error/index.jsx";
 
 const App = () => {
     const { search } = window.location;
@@ -23,7 +23,7 @@ const App = () => {
                         path="/fichelogement/:id"
                         element={<Fichelogement />}
                     />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="*" element={<Error />} />
                 </Route>
             </Routes>
         </HashRouter>
