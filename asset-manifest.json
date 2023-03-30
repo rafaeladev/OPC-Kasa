@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/OPC-Kasa/static/css/main.f1b975dc.css",
-    "main.js": "/OPC-Kasa/static/js/main.e6c012e7.js",
+    "main.css": "/OPC-Kasa/static/css/main.d0834539.css",
+    "main.js": "/OPC-Kasa/static/js/main.14de7d3e.js",
     "static/media/aboutbanner.png": "/OPC-Kasa/static/media/aboutbanner.b3ade54ce34df95b6593.png",
     "static/media/backheader.png": "/OPC-Kasa/static/media/backheader.d460c4f34721c0d8b173.png",
     "static/media/LOGO.png": "/OPC-Kasa/static/media/LOGO.f04cd580843ff11469c4.png",
     "index.html": "/OPC-Kasa/index.html",
-    "main.f1b975dc.css.map": "/OPC-Kasa/static/css/main.f1b975dc.css.map",
-    "main.e6c012e7.js.map": "/OPC-Kasa/static/js/main.e6c012e7.js.map"
+    "static/media/star_rate_color.svg": "/OPC-Kasa/static/media/star_rate_color.4949d967956f67c591576c1c58b597ba.svg",
+    "static/media/star_rate_gray.svg": "/OPC-Kasa/static/media/star_rate_gray.ae969662d77c07fdced4114f41bf3e69.svg",
+    "main.d0834539.css.map": "/OPC-Kasa/static/css/main.d0834539.css.map",
+    "main.14de7d3e.js.map": "/OPC-Kasa/static/js/main.14de7d3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1b975dc.css",
-    "static/js/main.e6c012e7.js"
+    "static/css/main.d0834539.css",
+    "static/js/main.14de7d3e.js"
   ]
 }
