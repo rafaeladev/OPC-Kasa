@@ -1,29 +1,43 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import cardsData from "../logements.json";
-import Error from "../components/Error";
-import Slideshow2 from "../components/Slideshow2";
+
+import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
-import { nanoid } from "nanoid";
-import { FaStar } from "react-icons/fa";
+import starColor from "../assets/star_rate_color.svg";
+import starGray from "../assets/star_rate_gray.svg";
 
 const Fichelogement = () => {
     const params = useParams();
+    let starRating = [];
     //console.log(params.id);
 
     const logement = cardsData.find((logement) => logement.id === params.id);
     if (logement) {
         const imagesUrl = logement.pictures.map((image) => image);
         const logementTags = logement.tags.map((tag) => (
-            <li key={nanoid()} className="ficheLogement__tags">
+            <li key={tag} className="ficheLogement__tags">
                 {tag}
             </li>
         ));
         const [firstName, lastName] = logement.host.name.split(" ");
 
+        for (let i = 0; i < 5; i++) {
+            starRating = [
+                ...starRating,
+                <li key={i}>
+                    <img
+                        className="ficheLogement__starRating"
+                        src={logement.rating > i ? starColor : starGray}
+                        alt="star icon"
+                    />
+                </li>,
+            ];
+        }
+
         return (
             <section className="ficheLogement">
-                <Slideshow2 imagesUrl={imagesUrl} />
+                <Slideshow imagesUrl={imagesUrl} />
                 <div className="ficheLogement__index">
                     <div className="ficheLogement__main">
                         <h1>{logement.title}</h1>
@@ -42,63 +56,19 @@ const Fichelogement = () => {
                                 alt="host profile"
                             />
                         </div>
-                        <ul>
-                            <li
-                                className={
-                                    logement.rating > 0
-                                        ? "rating_actif  fa-2xl"
-                                        : "rating  fa-2xl"
-                                }
-                            >
-                                <FaStar size={30} />
-                            </li>
-                            <li
-                                className={
-                                    logement.rating > 1
-                                        ? "rating_actif  fa-2xl"
-                                        : "rating  fa-2xl"
-                                }
-                            >
-                                <FaStar size={30} />
-                            </li>
-                            <li
-                                className={
-                                    logement.rating > 2
-                                        ? "rating_actif"
-                                        : "rating"
-                                }
-                            >
-                                <FaStar size={30} />
-                            </li>
-                            <li
-                                className={
-                                    logement.rating > 3
-                                        ? "rating_actif"
-                                        : "rating"
-                                }
-                            >
-                                <FaStar size={30} />
-                            </li>
-                            <li
-                                className={
-                                    logement.rating > 4
-                                        ? "rating_actif"
-                                        : "rating"
-                                }
-                            >
-                                <FaStar size={30} />
-                            </li>
-                        </ul>
+                        <ul>{starRating}</ul>
                     </div>
                 </div>
                 <div className="ficheLogement__data">
                     <Collapse
                         title="Description"
                         content={logement.description}
+                        open={true}
                     />
                     <Collapse
                         title="Equipements"
                         content={logement.equipments}
+                        open={true}
                     />
                 </div>
                 {/* <Link to="../" className="ficheLogement__link">
@@ -106,9 +76,8 @@ const Fichelogement = () => {
                 </Link> */}
             </section>
         );
-    } else {
-        return <Error />;
     }
+    return <Navigate to="*" />;
 };
 
 export default Fichelogement;

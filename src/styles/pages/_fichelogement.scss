@@ -35,6 +35,10 @@
             grid-template-columns: 1fr;
             gap: 10px;
         }
+        @include tablette-only {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
     }
     &__host {
         padding-left: 20px;
@@ -43,7 +47,8 @@
             flex-direction: row-reverse;
             padding-left: 0px;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
+            padding-block: 5px;
         }
         &__data {
             display: flex;
@@ -91,6 +96,13 @@
     }
     &__link {
         margin-top: 100px;
+    }
+    &__starRating {
+        @include mobile-only {
+            height: 18px;
+            display: flex;
+            align-items: flex-end;
+        }
     }
 }
 

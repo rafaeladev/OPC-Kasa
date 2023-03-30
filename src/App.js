@@ -11,8 +11,6 @@ import Layout from "./components/Layout";
 import Error from "./components/Error/index.jsx";
 
 const App = () => {
-    const { search } = window.location;
-    console.log(search);
     return (
         <HashRouter>
             <Routes>

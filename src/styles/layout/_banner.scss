@@ -1,5 +1,4 @@
 .banner {
-    background-color: black;
     border-radius: 25px;
     &__homeimg {
         background: url("../../assets/backheader.png") center/cover;
@@ -10,18 +9,27 @@
             height: 223px;
             justify-content: center;
         }
+
+        @include tablette-only {
+            height: 200px;
+        }
     }
     &__title {
         color: $color-white;
         background-color: rgb(000 000 000 / 0.3);
-        border-radius: 25px;
         height: 111px;
+        border-radius: 25px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         padding: 20px;
         @include desktop-only {
             height: 223px;
+            align-items: center;
+            justify-content: center;
+        }
+        @include tablette-only {
+            height: 200px;
             justify-content: center;
         }
     }

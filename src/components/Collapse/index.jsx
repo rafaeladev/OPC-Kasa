@@ -4,7 +4,7 @@ import collapseDown from "../../assets/collapsedown.png";
 import { nanoid } from "nanoid";
 
 const Collapse = (props) => {
-    const [collapse, setCollapse] = React.useState(false);
+    const [collapse, setCollapse] = React.useState(props.open);
     let content = [];
 
     function handleClick() {

@@ -16,13 +16,16 @@
         margin-left: auto;
         & li {
             color: $color-piment;
-            margin-left: 50px;
+            margin-left: 2em;
             font-size: 1.3rem;
             @include mobile-only {
                 text-transform: uppercase;
                 font-size: 0.8rem;
-                margin-left: 30px;
+                margin-left: 1em;
             }
+        }
+        & ul {
+            margin-left: auto;
         }
         &__active {
             text-decoration: underline $color-piment;

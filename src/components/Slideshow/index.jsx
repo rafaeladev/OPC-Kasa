@@ -1,67 +1,91 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const proprietes = {
-    //duration: 5000,
-    //transitionDuration: 500,
-    infinite: false,
-    indicator: true,
-    arrow: false,
-};
+//import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import leftArrow from "../../assets/leftArrow.png";
+import rightArrow from "../../assets/rightArrow.png";
 
-const spanStyle = {
-    padding: "20px",
-    background: "#efefef",
-    color: "#000000",
-};
-
-const divStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundSize: "cover",
-    height: "400px",
-};
-
-const Slideshow = (props) => {
+const Slideshow2 = (props) => {
     const [currentImage, setCurrentImage] = React.useState(0);
-    return (
-        <>
-            <FaArrowLeft />
-            <div className="slide-container">
-                <Slide {...proprietes}>
-                    {/* {slideImages.map((slideImage, index) => (
-                    <div key={index}>
-                        <div
-                            style={{
-                                ...divStyle,
-                                backgroundImage: `url(${slideImage.url})`,
-                            }}
-                        >
-                            <span style={spanStyle}>{slideImage.caption}</span>
-                        </div>
-                    </div>
-                ))} */}
+    const slidesLenght = props.imagesUrl.length;
 
-                    {props.imagesUrl.map((url, index) => (
-                        <div key={index}>
-                            <div
-                                style={{
-                                    ...divStyle,
-                                    backgroundImage: `url(${url})`,
-                                }}
-                            >
-                                <span style={spanStyle}>blabla</span>
-                            </div>
-                        </div>
-                    ))}
-                </Slide>
-            </div>
-            <FaArrowRight />
-        </>
+    const toggleBullet = (indexPic) => {
+        let bulletsArray = [];
+        for (let i = 0; i < slidesLenght; i++) {
+            bulletsArray = [
+                ...bulletsArray,
+                <li
+                    key={i}
+                    className={
+                        i === indexPic
+                            ? `slidecontainer_bulletactive`
+                            : `slidecontainer__bullet`
+                    }
+                >
+                    ●
+                </li>,
+            ];
+        }
+        return bulletsArray;
+    };
+
+    const nextSlide = () => {
+        setCurrentImage(
+            currentImage === slidesLenght - 1 ? 0 : currentImage + 1
+        );
+        //setRight(true);
+    };
+
+    const prevSlide = () => {
+        setCurrentImage(
+            currentImage === 0 ? slidesLenght - 1 : currentImage - 1
+        );
+
+        // setRight(false);
+    };
+
+    const slideElement = props.imagesUrl.map((url, index) => {
+        return (
+            index === currentImage && (
+                <img
+                    key={index}
+                    // className={
+                    //     right
+                    //         ? "slide-image-activeright"
+                    //         : "slide-image-activeleft"
+                    // }
+                    src={url}
+                    alt="logement détails"
+                />
+            )
+        );
+    });
+
+    return (
+        <div className="slidecontainer">
+            <img
+                className={
+                    slidesLenght > 1
+                        ? `slidecontainer__leftArrow`
+                        : `slidecontainer__noArrow`
+                }
+                src={leftArrow}
+                alt="left arrow icon"
+                onClick={prevSlide}
+            />
+            <img
+                className={
+                    slidesLenght > 1
+                        ? `slidecontainer__rightArrow`
+                        : `slidecontainer__noArrow`
+                }
+                src={rightArrow}
+                alt="right arrow icon"
+                onClick={nextSlide}
+            />
+            <div className="slidecontainer__element">{slideElement}</div>
+            <ul>{slidesLenght > 1 ? toggleBullet(currentImage) : null}</ul>
+        </div>
     );
 };
 
-export default Slideshow;
+export default Slideshow2;

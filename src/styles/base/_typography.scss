@@ -14,6 +14,9 @@ p {
     @include desktop-only {
         font-size: 1rem;
     }
+    @include tablette-only {
+        font-size: 1rem;
+    }
 }
 
 h1 {
@@ -24,14 +27,14 @@ h1 {
     @include desktop-only {
         font-size: 2.6rem;
     }
+    @include tablette-only {
+        font-size: 2rem;
+    }
 }
 
 h2 {
     /*Locations names*/
     font-size: 1rem;
-    @include desktop-only {
-        font-size: 1rem;
-    }
 }
 
 h3 {
