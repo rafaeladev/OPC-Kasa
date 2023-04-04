@@ -30,7 +30,13 @@ const Collapse = (props) => {
                     onClick={handleClick}
                 />
             </p>
-            {collapse ? <p className="collapse__content">{content}</p> : ""}
+            {collapse ? (
+                <div className="collapse__content">
+                    <p>{content}</p>
+                </div>
+            ) : (
+                ""
+            )}
         </div>
     );
 };

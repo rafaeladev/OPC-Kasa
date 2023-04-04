@@ -3,6 +3,7 @@
     margin: auto;
     position: relative;
     color: $color-white;
+    border-radius: 20px;
 
     &__leftArrow {
         position: absolute;
@@ -60,7 +61,7 @@
         display: flex;
         width: 100%;
         border-radius: 10px;
-        animation: slides 500ms ease-in;
+        overflow: hidden;
         & img {
             border-radius: 20px;
             width: 100%;
@@ -78,9 +79,9 @@
 
 .slide-image-active {
     &right {
-        animation: slidesRight 200ms ease-in;
+        animation: slidesRight 500ms ease-in;
     }
     &left {
-        animation: slidesLeft 200ms ease-in;
+        animation: slidesLeft 500ms ease-in;
     }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.png";
 
-const Nav = (props) => {
+const Nav = () => {
     return (
         <div className="nav">
             <NavLink to="/">

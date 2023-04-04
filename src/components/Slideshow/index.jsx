@@ -6,6 +6,7 @@ import rightArrow from "../../assets/rightArrow.png";
 
 const Slideshow2 = (props) => {
     const [currentImage, setCurrentImage] = React.useState(0);
+    const [right, setRight] = React.useState(true);
     const slidesLenght = props.imagesUrl.length;
 
     const toggleBullet = (indexPic) => {
@@ -32,7 +33,7 @@ const Slideshow2 = (props) => {
         setCurrentImage(
             currentImage === slidesLenght - 1 ? 0 : currentImage + 1
         );
-        //setRight(true);
+        setRight(true);
     };
 
     const prevSlide = () => {
@@ -40,13 +41,18 @@ const Slideshow2 = (props) => {
             currentImage === 0 ? slidesLenght - 1 : currentImage - 1
         );
 
-        // setRight(false);
+        setRight(false);
     };
 
     const slideElement = props.imagesUrl.map((url, index) => {
         return (
             index === currentImage && (
                 <img
+                    className={
+                        right
+                            ? "slide-image-activeright"
+                            : "slide-image-activeleft"
+                    }
                     key={index}
                     // className={
                     //     right
@@ -62,6 +68,7 @@ const Slideshow2 = (props) => {
 
     return (
         <div className="slidecontainer">
+            <div className="slidecontainer__element">{slideElement}</div>
             <img
                 className={
                     slidesLenght > 1
@@ -82,7 +89,6 @@ const Slideshow2 = (props) => {
                 alt="right arrow icon"
                 onClick={nextSlide}
             />
-            <div className="slidecontainer__element">{slideElement}</div>
             <ul>{slidesLenght > 1 ? toggleBullet(currentImage) : null}</ul>
         </div>
     );

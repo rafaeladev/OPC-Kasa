@@ -16,14 +16,18 @@
     &__content {
         background-color: $color-gray;
         border-radius: 5px;
-        padding: 20px 10px 10px 10px;
         color: $color-piment;
+
         @include mobile-only {
             padding-bottom: 60px;
         }
-
-        animation: collapsein $menu-dur $menu-delay ease-in-out both;
+        animation: collapsein 0.5s linear;
+        & p {
+            animation: fadeIn 0.5s linear;
+            padding: 20px 10px 10px 10px;
+        }
     }
+
     &__button {
         height: 14px;
         cursor: pointer;

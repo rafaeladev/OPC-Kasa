@@ -1,10 +1,10 @@
 import React from "react";
 import Nav from "../Nav";
 
-const Header = (props) => {
+const Header = () => {
     return (
         <header className="header">
-            <Nav active={props.active} />
+            <Nav />
         </header>
     );
 };

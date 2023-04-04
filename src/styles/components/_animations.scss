@@ -1,43 +1,35 @@
 @keyframes collapsein {
     0% {
-        opacity: 0;
-        transform: translateY(-1px);
+        max-height: 0;
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        max-height: 500px;
     }
 }
 
-@keyframes collapseout {
+@keyframes fadeIn {
     0% {
-        opacity: 1;
-        transform: translateY(0px);
+        opacity: 0;
     }
     100% {
-        opacity: 0;
-        transform: translateY(-1px);
+        opacity: 1;
     }
 }
 
 @keyframes slidesLeft {
     0% {
-        opacity: 0;
-       // transform: translateX(-150px);
+        transform: translateX(-150px);
     }
     100% {
-        opacity: 1;
-      //  transform: translateX(0px);
+        transform: translateX(0px);
     }
 }
 
 @keyframes slidesRight {
     0% {
-        opacity: 0;
-        //transform: translateX(150px);
+        transform: translateX(+150px);
     }
     100% {
-        opacity: 1;
-        //transform: translateX(0px);
+        transform: translateX(0px);
     }
 }
