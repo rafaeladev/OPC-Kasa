@@ -1,0 +1,34 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //margin-bottom: $layout-mobile-padding;
+    @include desktop-only {
+        //margin-bottom: $layout-desktop-padding;
+    }
+    &__img {
+        max-width: 210px;
+        max-width: 145px;
+    }
+    &__link {
+        display: flex;
+        color: $color-piment;
+        margin-left: auto;
+        & li {
+            color: $color-piment;
+            margin-left: 2em;
+            font-size: 1.3rem;
+            @include mobile-only {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                margin-left: 1em;
+            }
+        }
+        & ul {
+            margin-left: auto;
+        }
+        &__active {
+            text-decoration: underline $color-piment;
+        }
+    }
+}

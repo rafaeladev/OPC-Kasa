@@ -1,3 +1,9 @@
+# PROJET GUIDILINES
+
+Step 7 : SlideShow component
+Step 8 : Logement's page created (JS + SASS)
+Step 9 : Error handling (error component created)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
