@@ -63,12 +63,12 @@ const Fichelogement = () => {
                     <Collapse
                         title="Description"
                         content={logement.description}
-                        open={true}
+                        open={false}
                     />
                     <Collapse
                         title="Equipements"
                         content={logement.equipments}
-                        open={true}
+                        open={false}
                     />
                 </div>
                 {/* <Link to="../" className="ficheLogement__link">
