@@ -36,6 +36,10 @@
         width: 100%;
         text-align: center;
         z-index: 2;
+        @include mobile-only {
+            text-align: left;
+            padding-left: 20px;
+        }
     }
     &__aboutimg {
         background: url("../../assets/aboutbanner.png") center/cover;
