@@ -1,7 +1,6 @@
 import React from "react";
 import collapseUp from "../../assets/collapseup.png";
 import collapseDown from "../../assets/collapsedown.png";
-import { nanoid } from "nanoid";
 
 const Collapse = (props) => {
     const [collapse, setCollapse] = React.useState(props.open);
@@ -12,9 +11,7 @@ const Collapse = (props) => {
     }
 
     if (props.title === "Equipements") {
-        content = props.content.map((equipement) => (
-            <li key={nanoid()}>{equipement}</li>
-        ));
+        content = props.content.map((equipement) => <li>{equipement}</li>);
     } else {
         content = props.content;
     }
