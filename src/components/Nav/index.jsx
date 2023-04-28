@@ -4,7 +4,7 @@ import Logo from "../../assets/LOGO.png";
 
 const Nav = () => {
     return (
-        <div className="nav">
+        <nav className="nav">
             <NavLink to="/">
                 <img className="nav__img" src={Logo} alt="logo" />
             </NavLink>
@@ -12,22 +12,26 @@ const Nav = () => {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        isActive ? "nav__link__active" : ""
+                        isActive
+                            ? "nav__link__item nav__link__active"
+                            : "nav__link__item"
                     }
                 >
-                    <li>Accueil</li>
+                    Accueil
                 </NavLink>
 
                 <NavLink
                     to="/apropos"
                     className={({ isActive }) =>
-                        isActive ? "nav__link__active" : ""
+                        isActive
+                            ? "nav__link__item nav__link__active"
+                            : "nav__link__item"
                     }
                 >
-                    <li>A Propos</li>
+                    A Propos
                 </NavLink>
             </ul>
-        </div>
+        </nav>
     );
 };
 

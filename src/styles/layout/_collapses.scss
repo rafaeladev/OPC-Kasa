@@ -32,4 +32,12 @@
         height: 14px;
         cursor: pointer;
     }
+    &__up {
+        transform: rotate(180deg);
+        transition: all 0.5s ease-out;
+    }
+    &__down {
+        transform: rotate(0deg);
+        transition: all 0.5s ease-out;
+    }
 }

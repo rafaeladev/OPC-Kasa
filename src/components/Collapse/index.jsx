@@ -1,6 +1,5 @@
 import React from "react";
 import collapseUp from "../../assets/collapseup.png";
-import collapseDown from "../../assets/collapsedown.png";
 
 const Collapse = (props) => {
     const [collapse, setCollapse] = React.useState(props.open);
@@ -21,8 +20,12 @@ const Collapse = (props) => {
             <p className="collapse__title">
                 {props.title}
                 <img
-                    src={collapse ? collapseUp : collapseDown}
-                    className="collapse__button"
+                    src={collapseUp}
+                    className={
+                        collapse
+                            ? "collapse__button collapse__up"
+                            : "collapse__button collapse__down"
+                    }
                     alt="collpase"
                     onClick={handleClick}
                 />
