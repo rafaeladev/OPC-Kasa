@@ -6,8 +6,8 @@ const Card = (props) => {
     //     linearGradient: `(190deg, #fa7c30 30%, rgba(0, 0, 0, 0)30%), url(${props.logement.cover}`,
     // };
     return (
-        <div className="card">
-            <Link to={`fichelogement/${props.logement.id}`}>
+        <Link to={`fichelogement/${props.logement.id}`}>
+            <div className="card">
                 <img
                     src={props.logement.cover}
                     className="card__img "
@@ -15,8 +15,8 @@ const Card = (props) => {
                 />
                 <div className="card__img__gradient"></div>
                 <h2 className="card__img__title">{props.logement.title}</h2>
-            </Link>
-        </div>
+            </div>
+        </Link>
     );
 };
 

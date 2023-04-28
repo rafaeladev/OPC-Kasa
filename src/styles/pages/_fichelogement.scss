@@ -1,7 +1,8 @@
 .ficheLogement {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     color: $color-piment;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
     & ul {
         justify-content: flex-start;
     }
